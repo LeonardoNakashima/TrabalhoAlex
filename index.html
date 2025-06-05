@@ -8,6 +8,22 @@
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <h1>Gerenciamento de Tarefas</h1>
+    <form id="form-tarefa">
+        <input type="text" id="tarefa" placeholder="Nome da Tarefa" required>
+        <input type="text" id="descricao" placeholder="Insira uma descrição (Opcional)">
+        <button type="submit" id="adicionar">Adicionar</button>
+    </form>
+
+    <div class="filtros">
+    <h3>Filtrar:</h3>
+    <div class="filtros-botoes">
+    <button onclick="setFiltro('todas')">Todas</button>
+    <button onclick="setFiltro('pendentes')">Pendentes</button>
+    <button onclick="setFiltro('concluidas')">Concluídas</button>
+    </div>
+  </div>
+
+  <div id="lista-tarefas"></div>
 </body>
 </html>
