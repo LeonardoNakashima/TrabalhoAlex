@@ -42,6 +42,7 @@ body {
 }
     
 .concluida { 
+    text-decoration: line-through;
     color: rgba(0, 171, 37, 0.652); 
 }
     

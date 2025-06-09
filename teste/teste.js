@@ -54,7 +54,7 @@ function renderTarefas() {
       <div class="tarefa-card">
       <h3>${tarefa.titulo}</h3><br>
       <small>${tarefa.descricao}</small><br>
-      <button onclick="Concluido(${tarefa.id})" id="concluir">Concluir</button>
+      <button onclick="Concluido(${tarefa.id}, this)" id="concluir"> ${tarefa.concluida ? 'Desconcluir' : 'Concluir'} </button>
       <button onclick="Excluir(${tarefa.id})" id="excluir">Excluir</button>
       </div>
     `;
@@ -62,10 +62,10 @@ function renderTarefas() {
   });
 }
 
-function Concluido(id) {
+function Concluido(id, botao) {
   const tarefa = tarefas.find(t => t.id === id);
-  if (tarefa && !tarefa.concluida) {
-    tarefa.concluida = true;
+  if (tarefa) {
+    tarefa.concluida = !tarefa.concluida;
     salvarLocal();
     renderTarefas();
   }
