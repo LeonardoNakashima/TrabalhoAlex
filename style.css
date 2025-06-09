@@ -7,18 +7,20 @@ form{
     text-align: center;
     
 }
+
+
 input{
     height: 45px;
     width: 300px;
 }
 #adicionar{
+    border-radius: 10px;
     background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
@@ -30,19 +32,24 @@ body {
     }
     
 .tarefa { 
+    display: inline-block;
+    text-align: center;
     border: 1px solid #ccc; 
     padding: 10px;
-    margin: 10px 0; 
+    margin: 10px; 
+    width: 250px;
+    color: red;
 }
     
 .concluida { 
-    text-decoration: line-through; 
-    color: gray; 
+    text-decoration: line-through;
+    color: rgba(0, 171, 37, 0.652); 
 }
     
 .filtros button { 
     background-color: #4CAF50;
     border: none;
+    border-radius: 10px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -60,4 +67,30 @@ body {
 
 .filtros{
     text-align: center;
+}
+
+#concluir{
+    background-color: #4CAF50;  
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#excluir{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

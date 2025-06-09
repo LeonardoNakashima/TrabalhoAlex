@@ -85,14 +85,14 @@
         div.innerHTML = `
           <strong>${tarefa.titulo}</strong><br>
           <small>${tarefa.descricao}</small><br>
-          <button onclick="toggleConclusao(${tarefa.id})">Concluir</button>
+          <button onclick="Concluido(${tarefa.id}, this)" id="concluir"> ${tarefa.concluida ? 'Desconcluir' : 'Concluir'} </button>
           <button onclick="excluirTarefa(${tarefa.id})">Excluir</button>
         `;
         container.appendChild(div);
       });
     }
     
-    function toggleConclusao(id) {
+    function Concluido(id) {
       const tarefa = tarefas.find(t => t.id === id);
       if (tarefa) {
         tarefa.concluida = !tarefa.concluida;
